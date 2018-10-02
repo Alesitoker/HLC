@@ -9,7 +9,13 @@
 </head>
 <body>
     <?php
-        $edad = 33;
+        const EDAD = 33;
+        // fuera de las clases warning?
+        define(DIAS_AÑO, 365);
+        define(HORAS_AÑO, 8760);
+        // Para clases y fuera de ellas.
+        const MINUTOS_AÑO = 525600;
+        const  SEGUNDOS_AÑO = 31536000;
     ?>
     <div>
         <span>
@@ -28,11 +34,11 @@
             ?>
         </span>
     </div>
-    <p>Para una persona de <?php echo $edad ?> años...</p>
-    <p>Su edad en dias es: <?php echo 365*$edad ?></p>
-    <p>Su edad en horas es: <?php echo 8760*$edad ?></p>
-    <p>Su edad en minutos es: <?php echo 525600*$edad ?></p>
-    <p>Su edad en segundos es: <?php echo 31536000*$edad ?></p>
+    <p>Para una persona de <?php echo EDAD ?> años...</p>
+    <p>Su edad en dias es: <?php echo DIAS_AÑO*EDAD ?></p>
+    <p>Su edad en horas es: <?php echo HORAS_AÑO*EDAD ?></p>
+    <p>Su edad en minutos es: <?php echo MINUTOS_AÑO*EDAD ?></p>
+    <p>Su edad en segundos es: <?php echo SEGUNDOS_AÑO*EDAD ?></p>
 
 </body>
 </html>
