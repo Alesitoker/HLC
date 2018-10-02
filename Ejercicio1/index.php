@@ -10,7 +10,7 @@
 <body>
     <?php
         const EDAD = 33;
-        // fuera de las clases warning?
+        // fuera de las clases. warning?
         define(DIAS_AÑO, 365);
         define(HORAS_AÑO, 8760);
         // Para clases y fuera de ellas.
