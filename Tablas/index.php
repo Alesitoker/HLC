@@ -11,7 +11,7 @@
     <table style="border-collapse: collapse; text-align: center">
         <?php
             $number = 1;
-            const TAM = 10;
+            define('TAM', 10);
             for($i = 0; $i < TAM; $i++) {
                 echo "<tr>";
                 for($j = 0; $j < TAM; $j++) {
@@ -24,19 +24,19 @@
     </table></br>
     <table style="border-collapse: collapse; text-align: center">
         <?php
-        $number = 1;
-        for($i = 0; $i < TAM; $i++) {
-            echo "<tr>";
-            for($j = 0; $j < TAM; $j++) {
-                if ($i%2 == 0) {
-                    echo "<td style='border: 1px solid black; padding: 2.5px'>$number</td>";
-                } else {
-                    echo "<td style='border: 1px solid black; background-color: burlywood; padding: 2.5px'>$number</td>";
+            $number = 1;
+            for($i = 0; $i < TAM; $i++) {
+                echo "<tr>";
+                for($j = 0; $j < TAM; $j++) {
+                    if ($i%2 == 0) {
+                        echo "<td style='border: 1px solid black; padding: 2.5px'>$number</td>";
+                    } else {
+                        echo "<td style='border: 1px solid black; background-color: darkgray; padding: 2.5px'>$number</td>";
+                    }
+                    $number++;
                 }
-                $number++;
+                echo "</tr>";
             }
-            echo "</tr>";
-        }
         ?>
     </table>
 </body>
