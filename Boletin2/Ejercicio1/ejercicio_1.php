@@ -11,21 +11,11 @@
 <body>
     <?php
         include '../ejercicioPHP.php';
+        include '../funciones.php';
     ?>
     <table>
-        <tr>
-            <?php
-                foreach ($arrayPersonas as $values) {
-                    foreach ($values as $key => $value) {
-                        echo "<td>";
-                            echo $key;
-                        echo "</td>";
-                    }
-                    break;
-                }
-            ?>
-        </tr>
         <?php
+            dibujarCabecera($arrayPersonas);
             foreach ($arrayPersonas as $values) {
                 echo "<tr>";
                 foreach ($values as $value) {
