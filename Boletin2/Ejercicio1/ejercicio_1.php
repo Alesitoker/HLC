@@ -16,15 +16,7 @@
     <table>
         <?php
             dibujarCabecera($arrayPersonas);
-            foreach ($arrayPersonas as $values) {
-                echo "<tr>";
-                foreach ($values as $value) {
-                    echo "<td>";
-                        echo $value;
-                    echo "</td>";
-                }
-                echo "</tr>";
-            }
+            dibujarCuerpo($arrayPersonas);
         ?>
     </table>
     <footer><p>copyright &copy; Alejandro Díaz Martínez</p></footer>

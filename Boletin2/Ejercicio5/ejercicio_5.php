@@ -37,15 +37,7 @@
             array_multisort($organizer[0], SORT_ASC, $organizer[1], SORT_ASC, $organizer[2], SORT_DESC, $organizer[3], SORT_DESC, $arrayPersonas);
         ?>
         <?php
-        foreach ($arrayPersonas as $values) {
-            echo "<tr>";
-            foreach ($values as $value) {
-                    echo "<td>";
-                        echo $value;
-                    echo "</td>";
-            }
-            echo "</tr>";
-        }
+            dibujarCuerpo($arrayPersonas);
         ?>
     </table>
     <footer><p>copyright &copy; Alejandro Díaz Martínez</p></footer>
