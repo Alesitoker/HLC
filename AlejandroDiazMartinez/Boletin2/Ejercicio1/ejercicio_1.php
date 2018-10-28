@@ -5,24 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ejercicio 3</title>
+    <title>1</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <?php
-        include "../ejercicioPHP.php";
-        include "../funciones.php";
+        include '../ejercicioPHP.php';
+        include '../funciones.php';
     ?>
     <table>
         <?php
-        dibujarCabecera($arrayPersonas);
-        foreach ($arrayPersonas as $values) {
-            echo "<tr>";
-            foreach ($values as $value) {
-                dibujarCasilla($value, $values['country'] == 3);
-            }
-            echo "</tr>";
-        }
+            dibujarCabecera($arrayPersonas);
+            dibujarCuerpo($arrayPersonas);
         ?>
     </table>
     <footer><p>copyright &copy; Alejandro Díaz Martínez</p></footer>
