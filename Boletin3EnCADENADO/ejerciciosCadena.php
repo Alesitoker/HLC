@@ -10,15 +10,21 @@
       include 'funciones.php';
 
       $cadena = 'En un lugar de la mancha de cuyo nombre';
+      $cadena2 = 'En un  / lugar de  / la mancha de / cuyo nombre';
       $cadenaDividir = '082307';
       $cadenaEncontrar = 'cuyo';
       $url = 'www.example.com/public_html/index.php';
+      $url2 = 'http://www.example.com/5478631';
       $email = 'rayy@example.com';
       $compararCadena1 = 'football';
       $compararCadena2 = 'footboll';
       $longitud;
       $caracter1 = 'a';
       $caracter2 = 'z';
+      $cadenaCero = '000547023.24';
+      $cadenaCeroComa = '2,543.12';
+      $cadenaCeroComa2 = '345,102,543.12';
+      $caracterBusqueda = '0';
       $arrayCadena;
       $resultado;
 
@@ -80,7 +86,28 @@
       echo introducirCadena("test", $cadena, 18);
 
       echo '<h2>Ejercicio 14</h2>';
-      
+      echo sprintf("<p>%s</p>", strstr($cadena, ' ', true));
+
+      echo '<h2>Ejercicio 15</h2>';
+      echo '<p>Original cadena : \'000547023.24\'</p>';
+      echo '<p>Valor esperado : \'547023.24\'</p>';
+      echo '<p>Salida: '.substr($cadenaCero, strspn($cadenaCero, $caracterBusqueda)).'</p>';
+
+      echo '<h2>Ejercicio 16</h2>';
+      echo borrarCadena($cadena, 'mancha');
+
+      echo '<h2>Ejercicio 17</h2>';
+      echo borrarCadena($cadena2, '/');
+
+      echo '<h2>Ejercicio 18</h2>';
+      echo substr(strrchr($url2, '/'),1);
+
+      echo '<h2>Ejercicio 19</h2>';
+      echo primerasCincoPalabras($cadena);
+
+      echo '<h2>Ejercicio 20</h2>';
+      echo sprintf("<p>%s</p>", borrarCadena($cadenaCeroComa, ','));
+      echo sprintf("<p>%s</p>", borrarCadena($cadenaCeroComa2, ','));
 
     ?>
   </body>

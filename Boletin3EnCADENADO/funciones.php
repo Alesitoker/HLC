@@ -53,4 +53,25 @@
       }
       return $trozo1.$cadenaAñadir.$trozo2;
   }
+
+  function borrarCadena($cadena, $cadenaBorra) {
+    return str_replace($cadenaBorra, '',$cadena);
+  }
+
+  function primerasCincoPalabras($cadena) {
+    $position = contarPalabras($cadena, 5);
+    return substr($cadena, 0, $position);
+  }
+
+  function contarPalabras($cadena, $cantidadEspacios) {
+    $numEspacios = 0;
+    $contador = 0;
+    do {
+      if ($cadena{$contador} == ' ') {
+        $numEspacios++;
+      }
+      $contador++;
+    } while ($contador < strlen($cadena) && $numEspacios != $cantidadEspacios);
+    return $contador;
+  }
  ?>
