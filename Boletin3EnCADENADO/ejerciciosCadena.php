@@ -35,10 +35,11 @@
       echo '<h2>Ejercicio 2</h2>';
       echo "<p>Cadena de entrada: $cadenaDividir</p>";
       echo sprintf("<p>Salida: %s</p>", dividirCadena($cadenaDividir));
+      echo sprintf("<p>Salida: %s</p>", implode(':', str_split($cadenaDividir, 2)));
 
       echo '<h2>Ejercicio 3</h2>';
       $resultado = strpos($cadena, $cadenaEncontrar);
-      if (!$resultado) {
+      if ($resultado === false) {
         echo "<p>La cadena '$cadenaEncontrar' no se ha podido encontrar.</p>";
       } else {
         echo "<p>La cadena '$cadenaEncontrar' se encuentra en la cadena.</p>";
@@ -66,7 +67,7 @@
       $arrayCadena = explode(', ', 'Uno, dos, tres, cuatro');
       echo '<pre>';
       print_r($arrayCadena);
-      echo '<pre>';
+      echo '</pre>';
 
       echo '<h2>Ejercicio 11</h2>';
       echo sprintf("<p>%s</p>", str_replace(strrchr($url, '.'), '', substr(strrchr($url, '/'), 1)));
@@ -74,6 +75,13 @@
       echo '<h2>Ejercicio 12</h2>';
       echo sprintf("<p>%c</p>", caracterSiguiente($caracter1));
       echo sprintf("<p>%c</p>", caracterSiguiente($caracter2));
+
+      echo '<h2>Ejercicio 13</h2>';
+      echo introducirCadena("test", $cadena, 18);
+
+      echo '<h2>Ejercicio 14</h2>';
+      
+
     ?>
   </body>
 </html>

@@ -42,4 +42,15 @@
     }
     return $resultado;
   }
+  function introducirCadena($cadenaAñadir, $cadena, $posicion) {
+      $trozo1 = substr($cadena, 0, $posicion);
+      $trozo2 = substr($cadena, $posicion);
+
+      if (strripos($trozo1, ' ') == strlen($trozo1)-1) {
+         $cadenaAñadir .= ' ';
+      } else if (strpos($trozo2, ' ') == 0) {
+        $cadenaAñadir = ' '.$cadenaAñadir;
+      }
+      return $trozo1.$cadenaAñadir.$trozo2;
+  }
  ?>
