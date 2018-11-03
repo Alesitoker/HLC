@@ -42,7 +42,9 @@
     }
     return $resultado;
   }
+
   function introducirCadena($cadenaAñadir, $cadena, $posicion) {
+    if ($posicion < strlen($cadena)) {
       $trozo1 = substr($cadena, 0, $posicion);
       $trozo2 = substr($cadena, $posicion);
 
@@ -52,6 +54,9 @@
         $cadenaAñadir = ' '.$cadenaAñadir;
       }
       return $trozo1.$cadenaAñadir.$trozo2;
+    } else {
+      return $cadenaAñadir;
+    }
   }
 
   function borrarCadena($cadena, $cadenaBorra) {

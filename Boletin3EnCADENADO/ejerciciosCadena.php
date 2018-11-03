@@ -72,7 +72,7 @@
       echo '<h2>Ejercicio 10</h2>';
       $arrayCadena = explode(', ', 'Uno, dos, tres, cuatro');
       echo '<pre>';
-      print_r($arrayCadena);
+        print_r($arrayCadena);
       echo '</pre>';
 
       echo '<h2>Ejercicio 11</h2>';
@@ -92,6 +92,7 @@
       echo '<p>Original cadena : \'000547023.24\'</p>';
       echo '<p>Valor esperado : \'547023.24\'</p>';
       echo '<p>Salida: '.substr($cadenaCero, strspn($cadenaCero, $caracterBusqueda)).'</p>';
+      echo '<p>Salida: '.ltrim($cadenaCero, $caracterBusqueda).'</p>';
 
       echo '<h2>Ejercicio 16</h2>';
       echo borrarCadena($cadena, 'mancha');
