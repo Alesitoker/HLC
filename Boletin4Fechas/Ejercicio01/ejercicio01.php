@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        echo idate("Y", time());
+        echo idate("Y");
     ?>
     <footer><p>copyright &copy; Alejandro Díaz Martínez</p></footer>
 </body>
