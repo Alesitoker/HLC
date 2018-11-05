@@ -1,10 +1,30 @@
 <?php
     function diasQueFaltan($fecha) {
-        $year = (idate("Y")+1);
+        $year;
+        if (FechaHaPasado($fecha)) {
+            $year = (idate("Y")+1);
+        } else {
+            $year = idate("Y");
+        }
+        
         $fecha1 = date_create(date('d-m-Y', strtotime("$fecha-$year")));
         $fecha2 = date_create(date('d-m-Y'));
         
         return numDias($fecha1, $fecha2);
+    }
+
+    function FechaHaPasado($fecha) {
+        $fecha1 = date('d-m-Y', strtotime("$fecha-2018"));
+        $fecha2 = date('d-m-Y');
+        $fechaDiv1 = explode('-', $fecha1);
+        $fechaDiv2 = explode('-', $fecha2);
+        // comprobamos si el cumpleaños ya ha posado
+        if ($fechaDiv1[1] < $fechaDiv2[1]) {
+            return true;
+        } else if ($fechaDiv1[0] < $fechaDiv2[0]) {
+            return  true;
+        }
+        return false;
     }
 
     function diasEntreFechas($fechaInicio, $fechaFin) {
