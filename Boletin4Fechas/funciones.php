@@ -83,4 +83,33 @@
     function cambioMesANombre($fecha) {
         return date('d/F/Y', strtotime($fecha));
     }
+
+    function fechaHoraMadrid() {
+        date_default_timezone_set('Europe/Madrid');
+        return date('d-m-Y H:i:s e');
+    }
+
+    function esFinDeSemana($fecha) {
+        $dia = date('N', strtotime($fecha));
+        if ($dia == 0 || $dia == 6) {
+            return true;
+        }
+        return false;
+    }
+
+    function sumarDias($fecha, $cantidad) {
+        $nuevaFecha = strtotime("+$cantidad day", strtotime($fecha));
+        return date('d-m-Y', $nuevaFecha);
+    }
+
+    function restarDias($fecha, $cantidad) {
+        $nuevaFecha = strtotime("-$cantidad day", strtotime($fecha));
+        return date('d-m-Y', $nuevaFecha);
+    }
+
+    function aumentarUnMes($fecha) {
+        $nuevaFecha = strtotime("+1 month", strtotime($fecha));
+
+        return date('d-m-Y', $nuevaFecha);
+    }
 ?>
