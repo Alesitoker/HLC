@@ -111,7 +111,7 @@
 
     function esFinDeSemana($fecha) {
         $dia = date('N', strtotime($fecha));
-        if ($dia == 0 || $dia == 6) {
+        if ($dia == 6 || $dia == 7) {
             return true;
         }
         return false;
