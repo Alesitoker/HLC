@@ -17,11 +17,11 @@
         <fieldset>
             <label>Coloque los valores</label>
             </br>
-            <input type="number" id="number1" name="number1">
+            <input type="number" id="number1" name="number1" required>
             </br>
-            <input type="number" id="number2" name="number2">
+            <input type="number" id="number2" name="number2" required>
             </br>
-            <input type="number" id="number3" name="number3">
+            <input type="number" id="number3" name="number3" required>
         </fieldset>
         <label>Selecciona operación</label>
         <select name="operaciones">
@@ -39,7 +39,7 @@
         $num1 = $_POST['number1'];
         $num2 = $_POST['number2'];
         $num3 = $_POST['number3'];
-        if (empty($num1) && empty($num2) && empty($num3)) {
+        if (empty($num1) || empty($num2) || empty($num3)) {
             echo '<p>Debes rellenar todos los campos</p>';
         } else {
             switch ($_POST['operaciones']) {
