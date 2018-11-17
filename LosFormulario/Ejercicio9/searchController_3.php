@@ -1,11 +1,10 @@
 <?php
     include "../ejercicioPHP_formulario.php";
 
-    if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['edad']) && isset($_POST['comparar']) && isset($_POST['paises'])) {
+    if (isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['edad']) && isset($_POST['comparar'])) {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $edad = $_POST['edad'];
-        $pais = $_POST['paises'];
         $arrayBusqueda;
 
         if (!empty($nombre)) {
@@ -16,8 +15,8 @@
                     $arrayBusqueda = busquedaApellido($arrayBusqueda, $apellido);
                 }
 
-                if (!empty($pais) && $pais != -1) {
-                    $arrayBusqueda = busquedaPais($arrayBusqueda, $pais);
+                if (isset($_POST['paises'])) {
+                    $arrayBusqueda = busquedaPais($arrayBusqueda, $_POST['paises']);
                 }
 
                 $arrayBusqueda = busquedaMayorQue($arrayBusqueda, $edad);

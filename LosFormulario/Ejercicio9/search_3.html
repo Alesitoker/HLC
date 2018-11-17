@@ -7,7 +7,7 @@
     <title>Buscar</title>
 </head>
 <body>
-    <form action="searchController.php" method="POST">
+    <form action="searchController_3.php" method="POST">
         <label for="name">Nombre:</label></br>
         <input name="nombre" id="nombre" type="text" placeholder="Introduce nombre" required/></br>
 
@@ -23,15 +23,14 @@
         </select>
         </br></br>
         <label for="paises">Selecciona un pais:</label>
-        <select name="paises" id="paises">
-            <option value="-1" selected hidden>Todos los paises</option>
-            <option value="0">Wales</option>
-            <option value="1">USA</option>
-            <option value="2">Ireland</option>
-            <option value="3">Scotland</option>
-            <option value="4">Australia</option>
-            <option value="5">England</option>
-        </select>
+        </br>
+        <input type="radio" name="paises" id="Wales" value="0"/><label for="Wales">Wales</label>
+        <input type="radio" name="paises" id="USA" value="1"/><label for="USA">USA</label>
+        <input type="radio" name="paises" id="Ireland" value="2"/><label for="Ireland">Ireland</label>
+        </br>
+        <input type="radio" name="paises" id="Scotland" value="3"/><label for="Scotland">Scotland</label>
+        <input type="radio" name="paises" id="Australia" value="4"/><label for="Australia">Australia</label>
+        <input type="radio" name="paises" id="England" value="5"/><label for="England">England</label>
         </br></br>
         <input type="submit" name="submit" value="enviar"/>
     </form>

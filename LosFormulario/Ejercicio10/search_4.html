@@ -7,7 +7,7 @@
     <title>Buscar</title>
 </head>
 <body>
-    <form action="searchController.php" method="POST">
+    <form action="searchController_4.php" method="POST">
         <label for="name">Nombre:</label></br>
         <input name="nombre" id="nombre" type="text" placeholder="Introduce nombre" required/></br>
 
@@ -22,16 +22,16 @@
             <option value="Igual">Igual</option>
         </select>
         </br></br>
-        <label for="paises">Selecciona un pais:</label>
-        <select name="paises" id="paises">
-            <option value="-1" selected hidden>Todos los paises</option>
+        <label for="paises">Selecciona un pais:</label></br>
+        <select name="paises[]" id="paises" multiple>
             <option value="0">Wales</option>
             <option value="1">USA</option>
             <option value="2">Ireland</option>
             <option value="3">Scotland</option>
             <option value="4">Australia</option>
             <option value="5">England</option>
-        </select>
+        </select></br>
+        <span style="color: grey">*Pulsa control para selecionar varios paises</span>
         </br></br>
         <input type="submit" name="submit" value="enviar"/>
     </form>

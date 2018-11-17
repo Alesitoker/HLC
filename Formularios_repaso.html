@@ -1,0 +1,143 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>Formulario 2</h1>
+
+  <!--
+FORMULARIOS: muestran campos para que el usuario ingrese datos.
+Dentro del form se incluyen todos los componentes del formulario, estos componentes se agrupan en:
+  - Elementos que reciben información (campos para introducir contenido).
+  - Elementos para mostrar información (label).
+  - Elementos para agrupar campos. (fieldset)
+-->
+  <form>
+
+    <fieldset>
+      <!-- Elemento para agrupar campos-->
+      <legend> Datos personales</legend>
+      <!--Elementos para mostrar inf: Título del fieldset (grupo de campos)-->
+
+      <!-- Hay dos formas de conectar el label a un imput: -->
+      <!--Relacionarlo con un id -->
+      <label for="nombre"> Nombre</label>
+      <input id="nombre" />
+
+      <!--Otra forma de conectar con el label es encerrar el imput dentro del label -->
+      <label>Nombre2
+      <!-- son los atributos mas importantes de la etiqueta input: value y name para capturar datos-->
+        <input value="" name="nombre" placeholder="Su nombre">
+      </label>
+
+
+      <!--Otros elementos para INPUT: Contraseña, Busqueda-->
+      <label> Contraseña </label>
+      <input type="password" name="contraseña" />
+      </br>
+      <!--Tendría sentido si estamos desarrollando una aplicación para el móvil-->
+      <label> Teléfono </label>
+      <input type="tel" name="telefono" size="5" maxlength="5" />
+
+      <label> Busqueda </label>
+      <input type="search" name="busqueda" />
+
+      <label> Número </label>
+      <input type="number" name="numero" />
+      </br>
+
+      <!--Otros elementos para input: radio (tienen el mismo name) son excluyentes-->
+      <label>Hombre
+        <input name="sexo" type="radio" value="hombre"/>
+      </label>
+
+      <label> Mujer
+        <input name="sexo" type="radio" value="mujer"/>
+      </Label>
+      </br>
+
+      <fieldset>
+        <legend>Aficiones</legend>
+        <!--Mismo ejemplo pero con checkbox: ya podemos seleccionar mas de uno los
+        name deben de ser diferentes para ponder almacenar más de un valor-->
+        <label>Deporte
+          <input name="afinciones_deporte" type="checkbox" value="Deporte" checked/>
+        </label>
+
+        <label> Cine
+          <input name="aficiones_cine" type="checkbox" value="Cine"/>
+        </label>
+
+        <label> Viajar
+          <input name="aficiones_viajar" type="checkbox" value="Viajar"/>
+        </label>
+
+        </br>
+
+      </fieldset>
+
+      </br>
+      <!--Otros elementos para input: checkbox (para mostrar el texto a la izquierda del selector)-->
+      <input name="puesto_directivo" type="checkbox" value="direccion" /> Dirección
+      <input name="puesto_tecnico" type="checkbox" value="tecnico" /> Técnico
+      <input name="puesto_empleado" type="checkbox" value="empleado" /> Empleado
+      </br>
+
+      <label> Rango </label>
+      <input type="range" name="rango" min="0" max="100" step="20" value="100"/>
+
+    </fieldset>
+
+    <label>  Adjuntar
+<!-- Para cambiar la apariencia que el navegador me muestra por defecto debo de hacerlo con CSS-->
+      <input type="file" />
+    </label>
+
+    <label> Limpiar formulario
+      <input type="reset" />
+    </label>
+    </br>
+    </br>
+
+    <label>
+      Oculto
+      <input type="hidden" value="campo oculto"/>
+    </label>
+
+<!-- Select--->
+  <fieldset>
+    <legend> Select y Textarea: Ejemplos </legend>
+
+    <select name= "pais" id="select_pais">
+<!-- optgroup: Para agrupar -->
+      <optgroup label= "Europa">
+
+        <option value="España"> España </option>
+
+      </optgroup>
+
+      <optgroup label="America">
+
+        <option value="Peru"> Peru </option>
+        <option value="Chile"> Chile </option>
+        <option value="Mexico"> Mexico </option>
+
+      </optgroup>
+
+    </select>
+  </br>
+
+<!-- Text Areas--->
+    <textarea name="mensaje" id="textarea_mensaje" cols="50" rows="10" maxlength="4"></textarea>
+
+
+  </fieldset>
+
+
+  </form>
+
+</body>
+
+</html>
