@@ -1,7 +1,7 @@
-<?php
+  <?php
 $arrayPersonas = array(
   array('id'=> "0AB239", 'country' => 1, 'firstname' => "Ernest"  , 'surname' => "Austin", 'age' => 30),
-  array('id'=> "12A179", 'country' => 1, 'firstname' => "Frances", 'surname' => "Poole", 'age' => 23),
+  array('id'=> "12A179", 'country' => 1, 'firstname' => "Ernest", 'surname' => "Poole", 'age' => 23),
   array('id'=> "1A90B9", 'country' => 1, 'firstname' => "Jacob", 'surname' => "Matthews", 'age' => 30),
   array('id'=> "227FF9", 'country' => 2, 'firstname' => "Mina", 'surname' => "Day", 'age' => 30),
   array('id'=> "2A6F39", 'country' => 5, 'firstname' => "Earl", 'surname' => "Mills", 'age' => 20),
@@ -62,43 +62,55 @@ $arrayPersonas = array(
   array('id'=> "1DED5F9", 'country' => 3, 'firstname' => "Rena", 'surname' => "Caldwell", 'age' => 67)
 );
 
+$arrayCountries = array(0 => "Wales", 1 => "USA", 2 => "Ireland", 3 => "Scotland", 4 => "Australia" , 5 => "England")
+
+
 /*************************************************************************************************************************
-*                                       BOLETIN EJERCICIOS 1. ESTRUCTURAS DE CONTROL ITERATIVAS
+*                                       BOLETIN EJERCICIOS 3. FORMULARIOS
 ***************************************************************************************************************************/
 
+//¡¡IMPORTANTE!!
+// Subir los ficheros a Edmodo en un fichero comprimido de tipo .ZIP con vuestro nombre y el número de boletin, Ejemplo
+// maria_gallego_boletin_3.zip
 
-//Crear un fichero para cada ejercicio. Subir los ficheros Edmodo en un fichero comprimido .ZIP (no usar formato de archivo propietarios).
-//Con tu nombre y apellido. NO CORREGIRÉ EL EJERCICIO SI NO CUMPLE DICHOS REQUISITOS.
+//El objetivo en este boletín es crear un buscador para poder así filtrar los datos de entrada que
+//recibimos a través del $arrayPersonas como en los boletines anteriores.
 
-//1. Dado el array anterior crear un fichero PHP que se llame ejercicio_1.php cuyo objetivo
-// es mostrar una tabla (HTML) que contenga la información contenida en el array, es decir la tabla contendrá
-// cinco columnas, "id", "country", "firstname", "surname", "age".
 
-//2. Devolver las personas de mayor y menor edad e incluirlas en una tabla con el formato explicado en el ejercicio
-// anterior. (El fichero de este ejercico se debe llamar ejercicio_2.php).
+//EJERCICIOS
+//1. Crear un formulario que contenga un input de entrada donde el usuario podrá introducir
+//el nombre de la persona a buscar. Siendo el resultado a mostrar una tabla (con el mismo formato
+//que en todos los boletines anteriores) con las personas que tengan ese nombre. Por Ejemplo
+//si introducimos "Kyle" nos devolverá todas aquellas personas que se llamen "Kyle".
+//La búsqueda debe ser estricta y no sensible a mayúsculas/minúsculas.
+//El fichero que contine el formulario se ha de llamar search.html y su action searchController.php
 
-//3. Crear un fichero que devuelva solo las personas que pertenecen al pais con código 3 en formato tabla HTML
-// como se definió en el ejercicio 1. (ejercicio_3.php)
+//2. Añadir al formulario un input con el Apellido.
 
-//4. Dado el siguiente array.
-$arrayCountries = array(0 => "Wales", 1 => "USA", 2 => "Ireland", 3 => "Scotland", 4 => "Australia" , 5 => "England");
-// Mostrar una tabla HTML con el formato del primer ejercicio en el que la columna country, en lugar de contener sú código numérico contenga
-// el nombre del pais.
+//3. Añadir al formulario un input con la edad.
 
-//5. Devolver una tabla HTML (mismo formato que ejercicio 1), donde las personas aparezcan ordenadas de manera ascendente por edad.
-// En caso de que dos individuos tengan la misma edad se considerará menor aquel cuyo código de país sea menor y en el caso de igualdad
-// la siguiente condición sería nombre y después apellido y si todas las condiciones son igual pues el que esté en una posición menor en el array.
+//4. Añadir un select con los paises que se pasan a través de $arrayCountries.
 
-//6. Devolver en una tabla (formato ejercicio 1) con las 5 personas más jovenes.
+//5. Añadir al select anterior un valor que sea "Todos los paises"
 
-//7. Devolver en una tabla (formato ejercicio 1) la personas de mayor edad de cada uno de los paises, en el caso de haber más de uno pues mostrarlos.
-// Las personas deben aparecer ordenadas por codigo de pais descendentemente.
+//6. Añadir un select que estará ligado al input "EDAD" con los siguiente valores
+//"Mayor igual", "Menor igual" o "igual" por lo que si el usario selecciona "Mayor igual" y en el input
+// edad introduce 30 tendrá que devolver las personas mayores o iguales a 30.
 
-//8. Dado un array que se encuentra en otro fichero (arrayRandom.php) y del que no sabemos sus valores pero si su estructura
-// devolver una tabla con las personas mayores a la edad dada y de los paises contenidos en el array, ordenadas por su ID.
-// Ejemplo de posible contenido del fichero
-// $arrayRandom = array("countries" => array(1, 3, 5),
-//                      "age" => 40);
-// Aclaración, podeis crear vosotros mismos un fichero arrayRandom.php con los datos del array anterior e incluirlo en vuestro fichero
-// a través de include para su uso.
+//7. Mostar un mensaje de error si el usuario introduce válores NO númericos en
+//el campo EDAD y si no rellena el campo NOMBRE.
+
+//8. Cambiar el select de paises por checkboxes.
+//El fichero que contine el formulario se ha de llamar search_2.html y su action searchController_2.php
+
+//9. Cambiar el select de paises por radio button.
+//El fichero que contine el formulario se ha de llamar search_3.html y su action searchController_3.php
+
+//10. Cambiar de nuevo el campo "PAIS" a un select y permitir seleccionar más de un pais.
+//El fichero que contine el formulario se ha de llamar search_4.html y su action searchController_4.php
+
+//11. (Opcional) Añadir la funcionalidad necesaria para que la búsqueda por nombre
+//no sea estricta, es decir si queremos buscar "k" me devolerá todos aquellos nombres que empiezan por k.
+//Si quiero buscar "ky" pues me devolverá todos los nombres que empiecen por ky
+//El fichero que contine el formulario se ha de llamar search_5.html y su action searchController_5.php
 ?>
