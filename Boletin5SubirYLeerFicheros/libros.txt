@@ -1,0 +1,13 @@
+﻿Titulo: libro1
+Tipo: Ejemplar
+Observaciones: esto es un libro que se puede abrir
+----------------------------------------
+Titulo: lorldskdl
+Tipo: Ejemplar
+Observaciones: asdlasjdhlksakdjl
+----------------------------------------
+Titulo: dsfsdf
+Tipo: Ejemplar
+Observaciones: dsfgdsfgdfg
+
+----------------------------------------Titulo: polloTipo: ColecciónObservaciones: frito

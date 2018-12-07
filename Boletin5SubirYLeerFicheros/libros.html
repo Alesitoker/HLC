@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Libros</title>
+</head>
+<body>
+    <h3>INSERTAR LOS DATOS DEL LIBRO</h3>
+    <form method="POST" action="libros_guardar.php">
+        <label for="title">Titulo</label>
+        <input name="title" id="title" type="text" required/>
+        </br></br>
+        <label>Tipo:</br>
+            <input type="radio" name="tipo" id="ejem" value="0" checked/><label for="ejem">Ejemplar</label>
+            <input type="radio" name="tipo" id="colec" value="1"/><label for="colec">Colección</label>
+        </label>
+        </br></br>
+        <label for="obser">Observaciones:</label></br>
+        <textarea name="obser" id="obser" rows="8" cols="30"></textarea>
+        </br>
+        <input type="submit" name="submit" value="Guardar datos del libro">
+    </form>
+    </br>
+    <a href="libros_datos.php">Mostrar los libros guardados</a>
+</body>
+</html>
