@@ -1,3 +1,10 @@
+<?php 
+    include('funciones.php');
+    // Si ha iniciado secion no podra acceder al login.
+    if (isset($_SESSION['user']) && isset($_SESSION['passwd'])) {
+        irA('welcome.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,9 +20,15 @@
         <input type="text" id="user" name="user"/>
         <br/>
         <label for="passwd">Password:</label>
-        <input type="text" id="passwd" name="passwd"/>
+        <input type="password" id="passwd" name="passwd"/>
         <br/>
-        <button>Ingresar</button>
+        <input type="submit" value="Ingresar">
     </form>
+    <?php
+        // se mostrara el mensaje de cuando podra volver a intentarlo.
+        if(isset($_SESSION['message'])) {
+            echo $_SESSION['message'];
+        } 
+    ?>
 </body>
 </html>
