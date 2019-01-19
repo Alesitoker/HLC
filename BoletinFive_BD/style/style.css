@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: auto;
+    padding: 12px;
+}
+
+th {
+    background: crimson;
+    padding: 1px 10px;
+    text-align: center;
+}
+
+td {
+    background: cornsilk;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 14px;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 8px;
+}

@@ -15,7 +15,6 @@
 
         if (mysqli_errno($conexion) != 0) {
             echo "<h1>ERROR AL REALIZAR LA CONSULTA, DEBE INTRODUCIR UN NUMERO</h1>";
-            exit();
         } else if (mysqli_num_rows($query) > 0) {
             echo "<table>";
             echo "<tr>
@@ -37,9 +36,9 @@
             echo "<h2 class='cant_empl'>Número de alumnos: ".mysqli_num_rows($query).'</h2>';
         } else {
             echo "<h1>NO EXISTEN ALUMNOS EN EL CURSO: $curso</h1>";
-            exit();
         }
     } else {
         header('location: ejercicio2.html');
     }
+    mysqli_close($conexion); 
 ?>
