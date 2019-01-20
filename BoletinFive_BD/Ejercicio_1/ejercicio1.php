@@ -5,7 +5,8 @@
 
     $conexion = mysqli_connect("localhost", "root", "", "base_de_datos_1") or die ("<h1>Error al conectar con la base de datos</h1>");
     
-    $consulta = query("SELECT apellido, oficio, dept_no, salario FROM emple ORDER BY 4");
+    $consulta = query($conexion, "SELECT apellido, oficio, dept_no, salario FROM emple ORDER BY 4");
+    
 
     if (mysqli_errno($conexion) != 0) {
         errorMessage($conexion);

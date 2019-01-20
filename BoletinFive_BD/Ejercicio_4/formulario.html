@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empleados del hospital</title>
+    <link rel=stylesheet href=../style/style.css>
+</head>
+<body>
+    <h1>EMPLEADOS POR HOSPITAL</h1>
+    <hr>
+    <form action="ejercicio4.php" method="POST">
+        <label for="cod_hospi">Escribe el número de hospital:</label>
+        <input id="cod_hospi" name="num_hospital" size="5" required/>
+        <br/>
+        <label for="funcion">Escribe la función:</label>
+        <input id="funcion" name="func" size="5" required/>
+        <br/>
+        <input id="submit" name="submitQuery" type="submit" value="Consultar empleados">
+    </form>
+</body>
+</html>

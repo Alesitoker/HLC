@@ -14,7 +14,7 @@
             echo "<tr>";
             // Dividimos el numero de elementos del array por que se pueden acceder a el por dos claves distintas.
             for ($i = 0; $i < count($fila)/2; $i++) {
-                echo '<td>'.utf8_decode($fila[$i]).'</td>';
+                echo '<td>'.utf8_encode($fila[$i]).'</td>';
             }
             echo "</tr>";
         }
@@ -38,6 +38,11 @@
     }
 
     function query($conexion, $query) {
-        mysqli_query($conexion, "$query");
+        return mysqli_query($conexion, $query);
+    }
+
+    function nameCode($consulta) {
+        $fila = mysqli_fetch_array($consulta);
+        return utf8_encode($fila[0]);
     }
 ?>

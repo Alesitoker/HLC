@@ -4,18 +4,21 @@
 }
 
 table {
-    margin: auto;
+    margin: 0 auto;
     padding: 12px;
 }
 
 th {
     background: crimson;
     padding: 1px 10px;
+    font-family: 'Palatino Linotype';
     text-align: center;
 }
 
 td {
     background: cornsilk;
+    padding: 1px 10px;
+    font-family: 'Lucida Sans';
     text-align: center;
 }
 
@@ -27,4 +30,17 @@ h1 {
 h2 {
     text-align: center;
     padding-top: 8px;
+}
+
+form {
+    text-align: center;
+    margin-top: 14px;
+}
+
+input {
+    margin: 10px 0;
+}
+
+#submit {
+    padding: 4px;
 }
