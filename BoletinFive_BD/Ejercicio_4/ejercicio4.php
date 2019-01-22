@@ -22,6 +22,8 @@
         } else {
             echo "<h1>NO HAY EMPLEADOS CON LA FUNCION $funcion EN EL HOSPITAL CON EL CODIGO $codHospital</h1>";
         }
+        echo '<a href="formulario.html">Volver</a>';
+        mysqli_close($conexion);
     } else {
         header("Location: formulario.html");
     }

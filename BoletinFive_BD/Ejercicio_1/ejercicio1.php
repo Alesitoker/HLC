@@ -18,4 +18,5 @@
     } else {
         echo '<h1>NO HAY EMPLEADOS</h1>';
     }
+    mysqli_close($conexion);
 ?>

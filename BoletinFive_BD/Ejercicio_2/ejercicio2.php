@@ -14,4 +14,5 @@
     } else {
         echo '<h1>NO HAY HOSPITALES</h1>';
     }
+    mysqli_close($conexion);
 ?>

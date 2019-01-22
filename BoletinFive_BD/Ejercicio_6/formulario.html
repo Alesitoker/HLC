@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Empleados del hospital</title>
+    <title>Ejercicio 6</title>
     <link rel=stylesheet href=../style/style.css>
 </head>
 <body>
-    <h1>EMPLEADOS POR HOSPITAL</h1>
+    <h1>EMPLEADOS POR DEPARTAMENTO Y OFICIO</h1>
     <hr>
-    <form action="ejercicio4.php" method="POST">
-        <label for="cod_hospi">Escribe el número de hospital:</label>
-        <input id="cod_hospi" name="num_hospital" type="text" size="5" required/>
+    <form action="ejercicio6.php" method="POST">
+        <label for="dept">Escribe el número de departamento:</label>
+        <input id="dept" name="cod_dept" type="text" size="10" required/>
         <br/>
-        <label for="funcion">Escribe la función:</label>
-        <input id="funcion" name="func" size="5" type="text" required/>
+        <label for="office">Escribe el oficio:</label>
+        <input id="office" name="office_name" size="10" required/>
         <br/>
         <input id="submit" name="submitQuery" type="submit" value="Consultar empleados"/>
     </form>

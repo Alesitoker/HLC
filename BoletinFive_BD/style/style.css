@@ -37,10 +37,43 @@ form {
     margin-top: 14px;
 }
 
+div {
+    text-align: center;
+}
+
+div form {
+    text-align: center;
+    padding: 15px 100px;
+    display: inline-block;
+    background: moccasin;
+}
+
+div.actualizar form {
+    background: beige;
+    border: 3px solid white;
+    outline: 1px solid gainsboro;
+    box-shadow: inset 0 0 10px black;
+}
+
 input {
     margin: 10px 0;
 }
 
+a {
+    align-items: center;
+}
+
 #submit {
     padding: 4px;
+}
+
+.button {
+    margin: 2px 2px;
+    padding: 2px 5px;
+}
+
+div > hr {
+    height: 1px;
+    margin-top: 14px;
+    background: black;
 }
