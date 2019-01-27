@@ -32,13 +32,23 @@
             if (isset($_POST['submitQuery'])) {
 
                     $consulta = query($conexion, "SELECT nombre, direccion FROM hospitales where cod_hospital = $cod_hospital");
-                    
+                    $consultaMedico = query($conexion, "SELECT apellidos, especialidad FROM medicos WHERE cod_hospital = $cod_hospital");
+
+
                     if (mysqli_errno($conexion) != 0) {
                         errorMessage($conexion);
                     } else if (mysqli_num_rows($consulta) > 0) {
                         $fila = mysqli_fetch_array($consulta);
                         echo 'NOMBRE DEL HOSPITAL A ELIMINAR: '.utf8_encode($fila['nombre']).'<br/>';
                         echo 'DIRECCIÓN DEL HOSPITAL A ELIMINAR: '.utf8_encode($fila['direccion']);
+                        if (mysqli_num_rows($consultaMedico) > 0) {
+                            echo "<h1>LISTADO DE LOS MEDICOS</h1>";
+                            drawTable($consultaMedico, ['APELLIDOS', 'ESPECIALIDAD']);
+                        } else {
+                            echo "<h1>NO HAY MEDICOS EN EL HOSPITAL CON CODIGO: $cod_hospital</h1>";
+                        }
+                    } else {
+                        echo "<h1>NO EXISTE HOPITAL CON EL COGIDO: $cod_hospital</h1>";
                     }
             } else if (isset($_POST['baja'])) {
 
